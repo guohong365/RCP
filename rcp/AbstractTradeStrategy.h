@@ -6,7 +6,7 @@
 #define DESCRIPTION_LEN 256
 #include <string>
 #include "../include/rcp_type.h"
-#include "rcp.h"
+#include "../include/rcp.h"
 #include "TradeStrategyItem.h"
 
 namespace rcp {

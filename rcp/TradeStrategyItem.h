@@ -2,7 +2,7 @@
 #define _TRADE_STRATEGY_INFO_H_
 
 #include <string>
-#include "rcp.h"
+#include "../include/rcp.h"
 
 namespace rcp {
 	 class RCP_API TradeStrategyItem

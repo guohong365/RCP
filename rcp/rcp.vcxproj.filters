@@ -50,9 +50,6 @@
     <ClCompile Include="AbstractTradeStrategyLoader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="rcp.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="TradeStrategyItem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
