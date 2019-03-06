@@ -2,7 +2,9 @@
 #include "AbstractTradeStrategy.h"
 
 
-rcp::AbstractTradeStrategy::AbstractTradeStrategy()
+rcp::AbstractTradeStrategy::AbstractTradeStrategy(
+	const std::string& name, int type,	bool valid,	bool enabled, const std::string& description)
+	:TradeStrategyItem(RCP_VERSION, "", type, valid, enabled, description)
 {
 }
 

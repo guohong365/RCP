@@ -3,13 +3,7 @@
 
 #ifdef WIN32
 
-#ifdef RCPAPI_EXPORTS
-#define RPC_API __declspec(dllexport)
-#else
-#define RPC_API __declspec(dllimport)
 #endif
-#endif
-
 #endif
 
 

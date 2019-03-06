@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<config>
-  <name>strategy_1</name>
-  <description>test strategy one</description>
-  <type>dll</type>
-  <enabled>true</enabled>
-</config>

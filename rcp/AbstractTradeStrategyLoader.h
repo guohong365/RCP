@@ -3,13 +3,15 @@
 #include "AbstractTradeStrategy.h"
 
 namespace rcp {
-	class TradeStrategyInfo;
+	class TradeStrategyItem;
 
-	RCP_API class AbstractTradeStrategyLoader {
+	 class RCP_API AbstractTradeStrategyLoader {
 	public:
 		virtual ~AbstractTradeStrategyLoader() = default;
-		virtual AbstractTradeStrategy *create(const TradeStrategyInfo * pInfo) = 0;
+		virtual AbstractTradeStrategy *create(const TradeStrategyItem * pInfo) = 0;
 	};
+
+
 	
 }
 

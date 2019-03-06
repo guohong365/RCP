@@ -1,5 +1,6 @@
 #ifndef _STRATEGY_SERVER_H_
 #define _STRATEGY_SERVER_H_
+#include <Poco/Util/Util.h>
 #include <Poco/Util/ServerApplication.h>
 using Poco::Util::ServerApplication;
 

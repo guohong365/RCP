@@ -43,7 +43,8 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -105,10 +106,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;RCP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(POCO_ROOT)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(POCO_ROOT)/lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,7 +156,7 @@
     <ClInclude Include="AbstractTradeStrategy.h" />
     <ClInclude Include="StrategyRepositoryManager.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TradeStrategyInfo.h" />
+    <ClInclude Include="TradeStrategyItem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AbstractTradeStrategyLoader.cpp" />
@@ -167,7 +170,7 @@
     </ClCompile>
     <ClCompile Include="AbstractTradeStrategy.cpp" />
     <ClCompile Include="StrategyRepositoryManager.cpp" />
-    <ClCompile Include="TradeStrategyInfo.cpp" />
+    <ClCompile Include="TradeStrategyItem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

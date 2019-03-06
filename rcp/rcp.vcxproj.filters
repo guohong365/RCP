@@ -27,10 +27,10 @@
     <ClInclude Include="AbstractTradeStrategy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TradeStrategyInfo.h">
+    <ClInclude Include="AbstractTradeStrategyLoader.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractTradeStrategyLoader.h">
+    <ClInclude Include="TradeStrategyItem.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,13 +47,13 @@
     <ClCompile Include="AbstractTradeStrategy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TradeStrategyInfo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="AbstractTradeStrategyLoader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="rcp.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TradeStrategyItem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

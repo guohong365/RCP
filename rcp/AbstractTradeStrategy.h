@@ -7,15 +7,20 @@
 #include <string>
 #include "../include/rcp_type.h"
 #include "rcp.h"
-#include "TradeStrategyInfo.h"
+#include "TradeStrategyItem.h"
 
 namespace rcp {
 
 	
-	RCP_API class  AbstractTradeStrategy : public TradeStrategyInfo
+	 class RCP_API AbstractTradeStrategy : public TradeStrategyItem
 	{
 	public:
-		AbstractTradeStrategy();
+		AbstractTradeStrategy(
+			const std::string& name,
+			int type,
+			bool valid = true,
+			bool enabled = true,
+			const std::string& description = "");
 		virtual ~AbstractTradeStrategy();
 		virtual void initialize() =0;
 		virtual long onMarketData(void * pData, size_t size) =0;

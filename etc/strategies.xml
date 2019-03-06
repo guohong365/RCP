@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strategies>
+  <strategy name="strategy 1" description="test strategy one" type="dll" enabled="true" path="strategy1.dll"/>
+  <strategy name="strategy 2" description="test strategy two" type="dll" enabled="true" path="strategy2.dll"/>
+</strategies>
