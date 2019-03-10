@@ -22,6 +22,11 @@ int rcp::TradeStrategyItem::type() const
 	return _type;
 }
 
+const std::string& rcp::TradeStrategyItem::path() const
+{
+	return _path;
+}
+
 bool rcp::TradeStrategyItem::isValid() const
 {
 	return _valid;
@@ -46,13 +51,21 @@ rcp::TradeStrategyItem::~TradeStrategyItem()
 {
 }
 
-rcp::TradeStrategyItem::TradeStrategyItem(const std::string& version, const std::string& name, int type, bool valid,
-                                          bool enabled, const std::string& description): _version(version)
-                                                                                         , _name(name)
-                                                                                         , _description(description)
-                                                                                         , _type(type)
-                                                                                         , _valid(valid)
-                                                                                         , _enabled(enabled)
+rcp::TradeStrategyItem::TradeStrategyItem(
+	const std::string& version, 
+	const std::string& name, 
+	int type,
+	const std::string& path,
+	bool valid,
+	bool enabled, 
+	const std::string& description)
+	: _version(version)
+	, _name(name)
+	, _description(description)
+	, _type(type)
+	, _path(path)
+	, _valid(valid)
+	, _enabled(enabled)
 {
 }
 
@@ -74,4 +87,9 @@ void rcp::TradeStrategyItem::description(const std::string& desc)
 void rcp::TradeStrategyItem::type(int type_)
 {
 	_type = type_;
+}
+
+void rcp::TradeStrategyItem::path(const std::string& path_)
+{
+	_path = path_;
 }

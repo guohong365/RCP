@@ -152,7 +152,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractTradeStrategyLoader.h" />
+    <ClInclude Include="StrategyRunner.h" />
+    <ClInclude Include="TradeStrategyLoader.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="AbstractTradeStrategy.h" />
     <ClInclude Include="StrategyRepositoryManager.h" />
@@ -160,7 +161,8 @@
     <ClInclude Include="TradeStrategyItem.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AbstractTradeStrategyLoader.cpp" />
+    <ClCompile Include="StrategyRunner.cpp" />
+    <ClCompile Include="TradeStrategyLoader.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
