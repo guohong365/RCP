@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "SubscriberTest.h"
 #include <Poco/Util/XMLConfiguration.h>
 #include <Poco/Util/LoggingConfigurator.h>

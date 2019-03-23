@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "StrategyRunner.h"
 #include "../rcp/TradeStrategy.h"
 #include <Poco/Util/HelpFormatter.h>

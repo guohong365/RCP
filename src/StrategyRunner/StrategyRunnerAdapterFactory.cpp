@@ -1,5 +1,3 @@
-#include "pch.h"
-
 #include "StrategyRunnerAdapterFactory.h"
 #include <Poco/SingletonHolder.h>
 #include "../rcp/TradeStrategy.h"

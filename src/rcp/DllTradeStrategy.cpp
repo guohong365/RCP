@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "DllTradeStrategy.h"
 
 rcp::DllTradeStrategy::DllTradeStrategy()

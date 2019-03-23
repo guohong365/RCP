@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "CtpHelper.h"
 
 std::string rcp::CtpHelper::getMarketDataString(CThostFtdcDepthMarketDataField* pDepthMarketData)

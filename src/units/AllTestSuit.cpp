@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "AllTestSuit.h"
 #include "SubscriberTest.h"
 #include "RunnerStubTest.h"

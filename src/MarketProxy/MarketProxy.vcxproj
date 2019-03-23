@@ -91,13 +91,13 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(POCO_ROOT)/include;../include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(POCO_ROOT)/include;../../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../lib/tradeapi;$(POCO_ROOT)/lib/$(Platform);../$(Configuration)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>thostmduserapi.lib;rcp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(POCO_ROOT)/lib/$(Platform);../../lib/$(PlatformTarget)/tradeapi;../../$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>rcp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

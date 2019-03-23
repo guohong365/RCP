@@ -1,5 +1,3 @@
-#include "pch.h"
-
 #include "StrategyRunnerAdapter.h"
 #include "../rcp/DllTradeStrategy.h"
 

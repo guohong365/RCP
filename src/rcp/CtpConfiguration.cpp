@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "CtpConfiguration.h"
 #include <tradeapi/ThostFtdcMdApi.h>
 

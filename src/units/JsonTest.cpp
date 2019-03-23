@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "JsonTest.h"
 #include <Poco/JSON/Object.h>
 #include <CppUnit/TestSuite.h>

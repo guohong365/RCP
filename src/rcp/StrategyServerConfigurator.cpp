@@ -1,6 +1,4 @@
-﻿#include "stdafx.h"
-
-#include "StrategyServerConfigurator.h"
+﻿#include "StrategyServerConfigurator.h"
 #include <Poco/UTF8Encoding.h>
 #include <Poco/AutoPtr.h>
 #include <cassert>

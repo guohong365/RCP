@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "DllTest.h"
 #include <Poco/AutoPtr.h>
 #include <Poco/SharedLibrary.h>

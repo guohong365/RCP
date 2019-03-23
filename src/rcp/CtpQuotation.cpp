@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "CtpQuotation.h"
 #include <tradeapi/ThostFtdcUserApiStruct.h>
 namespace rcp {

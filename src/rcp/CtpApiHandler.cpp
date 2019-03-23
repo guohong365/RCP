@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "CtpApiHandler.h"
 #include <iostream>
 #include <tradeapi/ThostFtdcMdApi.h>

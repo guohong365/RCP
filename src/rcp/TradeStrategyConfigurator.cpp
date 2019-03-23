@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "TradeStrategyConfigurator.h"
 #include "DllTradeStrategy.h"
 #define CURRENT_STRATEGY_VERSION "1.0.0"

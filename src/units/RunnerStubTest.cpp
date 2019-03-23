@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "RunnerStubTest.h"
 #include <CppUnit/TestCaller.h>
 #include "../rcp/RunnerStub.h"

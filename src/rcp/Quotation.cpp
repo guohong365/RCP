@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include  "Quotation.h"
 #include <Poco/JSON/Object.h>
 #include <Poco/JSON/Parser.h>

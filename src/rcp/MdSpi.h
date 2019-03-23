@@ -2,7 +2,6 @@
 #include "rcp.h"
 #include <tradeapi/ThostFtdcMdApi.h>
 #include "CtpConfiguration.h"
-#include "Quotation.h"
 #include "QuotationHandler.h"
 #include <vector>
 #include <set>
