@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <StrategyServer name="红云Π策略运行服务器" version="0.0.1">
+    <CTP>
+      <user>137637</user>
+      <password>710929</password>
+      <brokerId>9999</brokerId>
+      <front-end>tcp://180.168.146.187:10031</front-end>
+      <cache>../cache</cache>
+    </CTP>
+    <Runners>
+      <runner instrument="j1905" exec="StrategyRunner" config="../etc/strategy1.xml" />
+      <runner instrument="sm1905" exec="StrategyRunner" config="../etc/strategy2.xml" />
+    </Runners>
+  </StrategyServer>
+  <logging>
+    <formatters>
+      <f1>
+        <class>PatternFormatter</class>
+        <pattern>%P [%p] %Y-%m-%d %H:%M:%S.%i %t [%s]</pattern>
+        <times>local</times>
+      </f1>
+    </formatters>
+    <channels>
+      <c1>
+        <class>ColorConsoleChannel</class>
+        <formatter>f1</formatter>
+
+        <enableColors>true</enableColors>
+        <traceColor>darkgray</traceColor>
+        <debugColor>gray</debugColor>
+        <informationColor>green</informationColor>
+        <noticeColor>lightBlue</noticeColor>
+        <warningColor>yellow</warningColor>
+        <errorColor>magenta</errorColor>
+        <criticalColor>lightRed</criticalColor>
+        <fatalColor>red</fatalColor>
+      </c1>
+      <c2>
+        <class>FileChannel</class>
+        <path>app.log</path>
+        <formatter>f1</formatter>
+        <rotation>10 M</rotation>
+        <archive>number</archive>
+        <times>local</times>
+        <compress>true</compress>
+        <purgeAge>3 days</purgeAge>
+        <flush>true</flush>
+      </c2>
+      <c0>
+        <class>SplitterChannel</class>
+        <channel>c1,c2</channel>
+      </c0>
+    </channels>
+    <loggers>
+      <root>
+        <channel>c0</channel>
+        <level>trace</level>
+      </root>
+    </loggers>
+  </logging>
+</config>

@@ -1,0 +1,5 @@
+LIBRARY strategy1
+EXPORTS
+	onInitialize @1
+	onTick		 @2
+	onUninitialize @3

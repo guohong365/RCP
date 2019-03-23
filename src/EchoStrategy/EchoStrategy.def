@@ -1,0 +1,6 @@
+LIBRARY EchoStrategy
+EXPORTS
+	onStart	@1
+	onTickIn @2
+	onStop @3
+
