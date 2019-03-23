@@ -1,0 +1,1 @@
+SUBDIRS=strategy1 rcp rcpApi EchoRunner EchoStrategy MarketProxy StrategyRunner StrategyServer units
