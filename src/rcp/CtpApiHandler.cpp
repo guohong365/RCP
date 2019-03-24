@@ -1,4 +1,4 @@
-
+ï»¿
 #include "CtpApiHandler.h"
 #include <iostream>
 #include <tradeapi/ThostFtdcMdApi.h>
@@ -88,7 +88,7 @@ void rcp::CtpApiHandler::OnRtnForQuoteRsp(CThostFtdcForQuoteRspField* pForQuoteR
 
 bool rcp::CtpApiHandler::isError(CThostFtdcRspInfoField* pRspInfo)
 {
-	// Èç¹ûErrorID != 0, ËµÃ÷ÊÕµ½ÁË´íÎóµÄÏìÓ¦
+	// å¦‚æžœErrorID != 0, è¯´æ˜Žæ”¶åˆ°äº†é”™è¯¯çš„å“åº”
 	const bool bResult = ((pRspInfo) && (pRspInfo->ErrorID != 0));
 	if (bResult)
 		std::cerr << "--->>> ErrorID=" << pRspInfo->ErrorID << ", ErrorMsg=" << pRspInfo->ErrorMsg << std::endl;
@@ -104,6 +104,6 @@ void rcp::CtpApiHandler::login()
 	strcpy_s(loginField.UserID, USER_ID);
 
 	const int result = _pApi->ReqUserLogin(&loginField, ++requestId);
-	std::cerr << " login : " << (result == 0 ? "³É¹¦" : "Ê§°Ü") << std::endl;
+	std::cerr << " login : " << (result == 0 ? "æˆåŠŸ" : "å¤±è´¥") << std::endl;
 }
 
