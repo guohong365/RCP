@@ -29,6 +29,8 @@ stamp-h1
 autom4te.cache/*
 **/.libs/
 **/.deps/
+!bin/thostmduserapi.dll
+!bin/thosttraderapi.dll
 
 # User-specific files
 *.suo
