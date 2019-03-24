@@ -72,7 +72,7 @@ void rcp::CtpConfiguration::add(RunnerStub* pRunner)
 	}
 	else
 	{
-		map.insert_or_assign(pRunner->instrument(), new RunnerList);
+		map.insert(std::make_pair(pRunner->instrument(), new RunnerList));
 		map.at(pRunner->instrument())->push_back(pRunner);
 	}
 }
