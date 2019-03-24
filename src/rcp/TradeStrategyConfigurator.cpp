@@ -65,5 +65,5 @@ rcp::TradeStrategyFactory& rcp::TradeStrategyFactory::instance()
 
 void rcp::TradeStrategyFactory::registerInner()
 {
-	_configurators.insert_or_assign("dll", new DllTradeStrategyConfigurator);
+	_configurators.insert(std::make_pair("dll", new DllTradeStrategyConfigurator));
 }

@@ -6,7 +6,6 @@
 #include <Poco/LoggingFactory.h>
 #include <Poco/PatternFormatter.h>
 #include <Poco/ConsoleChannel.h>
-#include <Poco/WindowsConsoleChannel.h>
 #include <Poco/FormattingChannel.h>
 #include <Poco/Util/HelpFormatter.h>
 using Poco::Util::Application;
@@ -37,7 +36,7 @@ void EchoApp::initialize(Application& app)
 {
 	Poco::PatternFormatter *pFormatter=new Poco::PatternFormatter();
 	pFormatter->setProperty("pattern", "%P [%p] %Y-%m-%d %H:%M:%S.%i %t [%s]");
-	Poco::Channel *pConsoleChannel = new Poco::WindowsColorConsoleChannel();
+	Poco::Channel *pConsoleChannel = new Poco::ColorConsoleChannel();
 	pConsoleChannel->setProperty("enableColors", "true");
 	pConsoleChannel->setProperty("traceColor", "darkgray");
 	pConsoleChannel->setProperty("debugColor", "lightBlue");

@@ -119,6 +119,7 @@ void rcp::StrategyServer::handleHelp(const std::string& name, const std::string&
 	stopOptionsProcessing();
 }
 
+#ifdef WIN32
 BOOL rcp::StrategyServer::ConsoleCtrlHandler(DWORD ctrlType)
 {
 	switch (ctrlType)
@@ -133,6 +134,7 @@ BOOL rcp::StrategyServer::ConsoleCtrlHandler(DWORD ctrlType)
 		return FALSE;
 	}
 }
+#endif
 int rcp::StrategyServer::main(const std::vector<std::string>& args)
 {
 	logger().information(std::string("Server [") + name() + "(" + version() + ")] started ...");

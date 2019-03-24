@@ -7,7 +7,6 @@ rcp::InvalidFormat::InvalidFormat()
 }
 
 rcp::InvalidFormat::InvalidFormat(const char* what_)
-	:exception(what_)
 {
 }
 

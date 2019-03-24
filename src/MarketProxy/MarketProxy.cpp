@@ -16,7 +16,7 @@ int iInstrumentID = 2;									// 行情订阅数量
 // 请求编号
 int iRequestID = 0;
 
-void main(void)
+int main(void)
 {
 
 	// 初始化UserApi
@@ -26,4 +26,5 @@ void main(void)
 			"tcp://180.168.146.187:10031", { "j1905","sm1905" }), nullptr);
 	spi.connect();
 	spi.join();
+	return 0;
 }
