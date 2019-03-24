@@ -25,7 +25,7 @@ config.h
 config.status
 libtool
 stamp-h1
-autom4te.cache/
+/autom4te.cache/
 **/.libs/
 **/.deps/
 
