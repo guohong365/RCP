@@ -113,6 +113,7 @@ int EchoApp::main(const std::vector<std::string>& args)
 	if (message.length()) {
 		logger().information(message);
 	}
+	logger().information("echo runner stopped....");
 	return EXIT_OK;
 }
 

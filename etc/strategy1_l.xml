@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Strategy>
+    <name>strategy 1</name>
+    <description>test strategy one</description>
+    <type>dll</type>
+    <enabled>true</enabled>
+    <path>strategy1.so</path>
+    <methods initialize="onInitialize" onTick="onTick" onUninitialize="onUninitialize" />
+    <protocol>1.0</protocol>
+  </Strategy>
+</config>

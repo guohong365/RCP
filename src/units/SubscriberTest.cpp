@@ -1,4 +1,5 @@
-﻿#include "SubscriberTest.h"
+﻿#include <iostream>
+#include "SubscriberTest.h"
 #include <Poco/Util/XMLConfiguration.h>
 #include <Poco/Util/LoggingConfigurator.h>
 #include <Poco/Logger.h>
@@ -44,7 +45,11 @@ void SubscriberTest::testRun()
 	TaskManager taskManager;
 	taskManager.start(&subscriber);
 	logger.trace("started");
+#ifdef WIN32
 	Sleep(20000);
+#else
+	sleep(20);
+#endif
 	taskManager.cancelAll();
 	taskManager.joinAll();
 	

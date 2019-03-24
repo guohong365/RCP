@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <Strategy>
+    <name>EchoStrategy</name>
+    <description>test strategy two : Echo incoming string.</description>
+    <type>dll</type>
+    <enabled>true</enabled>
+    <path>EchoStrategy.so</path>
+    <methods initialize="onStart" onTick="onTickIn" onUninitialize="onStop" />
+    <protocol>2.0</protocol>
+  </Strategy>
+</config>

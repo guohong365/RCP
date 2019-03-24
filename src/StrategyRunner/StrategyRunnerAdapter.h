@@ -1,5 +1,6 @@
 ﻿#ifndef _STRATEGY_RUNNER_H_
 #define _STRATEGY_RUNNER_H_
+#include <rcp.h>
 #include <Poco/Process.h>
 #include "../rcp/TradeStrategy.h"
 #include <Poco/Util/ServerApplication.h>
@@ -34,9 +35,9 @@ namespace rcp {
 		void uninitialize() override;
 		bool checkValid() override;
 	private:
-		typedef int(_stdcall *ON_INITIALIZE_CALLBACK)();
-		typedef void(_stdcall *ON_TICK_CALLBACK)(const void *, unsigned);
-		typedef void(_stdcall *ON_UNINITIALIZE_CALLBACK)();
+		typedef int(__stdcall *ON_INITIALIZE_CALLBACK)();
+		typedef void(__stdcall *ON_TICK_CALLBACK)(const void *, unsigned);
+		typedef void(__stdcall *ON_UNINITIALIZE_CALLBACK)();
 		std::string _initMethod;
 		std::string _onTickMethod;
 		std::string _uninitMethod;

@@ -10,7 +10,7 @@
 #endif
 #else
 #define RCP_API
-
+#define __stdcall
 #endif
 
 #define RCP_VERSION "0.0.1"

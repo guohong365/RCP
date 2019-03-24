@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "CppUnit/TestCase.h"
+#include <CppUnit/TestCase.h>
 #include <CppUnit/TestSuite.h>
 
 class AllTestSuit 

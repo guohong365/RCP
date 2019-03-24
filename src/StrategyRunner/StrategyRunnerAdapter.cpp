@@ -46,11 +46,11 @@ int rcp::DllRunnerAdapter::initialize()
 	try {
 		_library.load(path());
 		void *p = _library.getSymbol(_initMethod);
-		_fInit = static_cast<ON_INITIALIZE_CALLBACK>(p);
+		_fInit = reinterpret_cast<ON_INITIALIZE_CALLBACK>(p);
 		p = _library.getSymbol(_onTickMethod);
-		_fonTick = static_cast<ON_TICK_CALLBACK>(p);
+		_fonTick = reinterpret_cast<ON_TICK_CALLBACK>(p);
 		p = _library.getSymbol(_uninitMethod);
-		_fUninit = static_cast<ON_UNINITIALIZE_CALLBACK>(p);
+		_fUninit = reinterpret_cast<ON_UNINITIALIZE_CALLBACK>(p);
 		_fInit();
 		return 0;
 	}catch (Poco::LibraryLoadException& ex)
