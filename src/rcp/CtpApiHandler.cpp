@@ -100,9 +100,12 @@ void rcp::CtpApiHandler::login()
 {
 	CThostFtdcReqUserLoginField loginField;
 	memset(&loginField,0, sizeof(CThostFtdcLoginInfoField));
-	strcpy_s(loginField.BrokerID, BROKEN_ID);
-	strcpy_s(loginField.Password, PASSWORD);
-	strcpy_s(loginField.UserID, USER_ID);
+	strncpy(loginField.BrokerID, BROKEN_ID, sizeof(TThostFtdcBrokerIDType));
+	loginField.BrokerID[sizeof(TThostFtdcBrokerIDType) - 1]=0;
+	strncpy(loginField.Password, PASSWORD, sizeof(TThostFtdcPasswordType));
+	loginField.Password[sizeof(TThostFtdcPasswordType) - 1] = 0;
+	strncpy(loginField.UserID, USER_ID, sizeof(TThostFtdcUserIDType));
+	loginField.UserID[sizeof(TThostFtdcUserIDType) - 1] = 0;
 
 	const int result = _pApi->ReqUserLogin(&loginField, ++requestId);
 	std::cerr << " login : " << (result == 0 ? "成功" : "失败") << std::endl;

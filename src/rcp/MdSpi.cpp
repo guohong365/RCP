@@ -47,9 +47,12 @@ void rcp::CMdSpi::reqUserLogin()
 {
 	CThostFtdcReqUserLoginField req;
 	memset(&req, 0, sizeof(req));
-	strcpy_s(req.BrokerID, _config.brokerId.c_str());
-	strcpy_s(req.UserID, _config.userId.c_str());
-	strcpy_s(req.Password, _config.password.c_str());
+	strncpy(req.BrokerID, _config.brokerId.c_str(), sizeof(TThostFtdcBrokerIDType));
+	req.BrokerID[sizeof(TThostFtdcBrokerIDType) - 1] = 0;
+	strncpy(req.UserID, _config.userId.c_str(), sizeof(TThostFtdcUserIDType));
+	req.UserID[sizeof(TThostFtdcUserIDType) - 1] = 0;
+	strncpy(req.Password, _config.password.c_str(), sizeof(TThostFtdcPasswordKeyType));
+	req.Password[sizeof(TThostFtdcPasswordType) - 1] = 0;
 	int iResult = _pUserApi->ReqUserLogin(&req, ++_requestId);
 	cerr << "--->>> 发送用户登录请求: " << ((iResult == 0) ? "成功" : "失败") << endl;
 }
@@ -79,7 +82,8 @@ char ** prepareInstrumentsBuffer(std::set<std::string> &instruments)
 	{
 		std::string::size_type len =(*it).length() + 1;
 		ppInstruments[index] = new char[len];
-		strcpy_s(ppInstruments[index], len, (*it).c_str());
+		strncpy(ppInstruments[index], (*it).c_str(), len);
+		ppInstruments[index][len - 1] = 0;
 		index++;
 	}
 	return  ppInstruments;
@@ -107,7 +111,8 @@ rcp::CMdSpi::CMdSpi(const CtpConfiguration & config,IQuotationHandler *pHandler)
 void rcp::CMdSpi::connect()
 {
 	char frontAddress[1024];
-	strcpy_s(frontAddress, _config.marketFrontEnd.c_str()); //"tcp://180.168.146.187:10031";		// 前置地址
+	strncpy(frontAddress, _config.marketFrontEnd.c_str(), 1024); //"tcp://180.168.146.187:10031";		// 前置地址
+	frontAddress[1023] = 0;
 	_pUserApi->RegisterSpi(this);
 	_pUserApi->RegisterFront(frontAddress);
 	_pUserApi->Init();
