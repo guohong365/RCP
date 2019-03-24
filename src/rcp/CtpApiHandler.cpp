@@ -98,8 +98,8 @@ bool rcp::CtpApiHandler::isError(CThostFtdcRspInfoField* pRspInfo)
 
 void rcp::CtpApiHandler::login()
 {
-	CThostFtdcReqUserLoginField loginField;
-	memset(&loginField,0, sizeof(CThostFtdcLoginInfoField));
+	CThostFtdcReqUserLoginField loginField={0};
+	//memset(&loginField,'\0', sizeof(CThostFtdcLoginInfoField));
 	strncpy(loginField.BrokerID, BROKEN_ID, sizeof(TThostFtdcBrokerIDType));
 	loginField.BrokerID[sizeof(TThostFtdcBrokerIDType) - 1]=0;
 	strncpy(loginField.Password, PASSWORD, sizeof(TThostFtdcPasswordType));
