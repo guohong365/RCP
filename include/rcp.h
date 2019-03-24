@@ -10,10 +10,15 @@
 #endif
 #else
 #define RCP_API
+
 #endif
 
 #define RCP_VERSION "0.0.1"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
+#include <string>
 
 #endif
 

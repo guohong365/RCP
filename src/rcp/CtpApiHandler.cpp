@@ -1,4 +1,5 @@
 ﻿
+#include <rcp.h>
 #include "CtpApiHandler.h"
 #include <iostream>
 #include <tradeapi/ThostFtdcMdApi.h>
