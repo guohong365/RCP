@@ -43,5 +43,8 @@ AC_CONFIG_FILES([
 		 src/StrategyRunner/Makefile
 		 src/StrategyServer/Makefile
 		 src/units/Makefile
-		 third/Makefile])
+		 bin/Makefile
+		 lib/Makefile
+		 third/Makefile
+		 ])
 AC_OUTPUT

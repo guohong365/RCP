@@ -1,0 +1,1 @@
+EXTRA_DIST=libthostmduserapi.so libthosttraderapi.so thostmduserapi.lib thosttraderapi.lib
