@@ -5,17 +5,6 @@
 #include <tradeapi/ThostFtdcMdApi.h>
 #include "../rcp/MdSpi.h"
 
-// UserApi对象
-CThostFtdcMdApi* pUserApi;
-
-// 配置参数
-char FRONT_ADDR[] = "tcp://180.168.146.187:10031";		// 前置地址
-char *ppInstrumentID[] = { "cu1205", "cu1206" };			// 行情订阅列表
-int iInstrumentID = 2;									// 行情订阅数量
-
-// 请求编号
-int iRequestID = 0;
-
 int main(void)
 {
 

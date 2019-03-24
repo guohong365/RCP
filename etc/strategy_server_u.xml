@@ -9,8 +9,8 @@
       <cache>../cache</cache>
     </CTP>
     <Runners>
-      <runner instrument="j1905" exec="StrategyRunner" config="../etc/strategy1.xml" />
-      <runner instrument="sm1905" exec="StrategyRunner" config="../etc/strategy2.xml" />
+      <runner instrument="j1905" exec="strategy_runner" config="~/etc/strategy1.xml" />
+      <runner instrument="sm1905" exec="strategy_runner" config="~/etc/strategy2.xml" />
     </Runners>
   </StrategyServer>
   <logging>
