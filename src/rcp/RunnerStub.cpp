@@ -1,4 +1,4 @@
-#include "RunnerStub.h"
+﻿#include "RunnerStub.h"
 #include <Poco/Process.h>
 #include <Poco/Pipe.h>
 #include <Poco/Util/Application.h>

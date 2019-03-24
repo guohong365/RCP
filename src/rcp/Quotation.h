@@ -1,97 +1,97 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 namespace rcp {
 	class IQuotation
 	{
 	public:
 		virtual ~IQuotation() = default;
-		///ºÏÔ¼´úÂë
+		///åˆçº¦ä»£ç 
 		virtual const std::string& instrumentId() const= 0;
-		///½»Ò×ÈÕ
+		///äº¤æ˜“æ—¥
 		virtual const std::string&tradingDay() const = 0;
-		///½»Ò×Ëù´úÂë
+		///äº¤æ˜“æ‰€ä»£ç 
 		virtual const std::string&exchangeId()  const = 0;
-		///ºÏÔ¼ÔÚ½»Ò×ËùµÄ´úÂë
+		///åˆçº¦åœ¨äº¤æ˜“æ‰€çš„ä»£ç 
 		virtual const std::string& exchangeInstrumentId()  const = 0;
-		///×îĞÂ¼Û
+		///æœ€æ–°ä»·
 		virtual double lastPrice() const = 0;
-		///ÉÏ´Î½áËã¼Û
+		///ä¸Šæ¬¡ç»“ç®—ä»·
 		virtual double prevSettlementPrice() const = 0;
-		///×òÊÕÅÌ
+		///æ˜¨æ”¶ç›˜
 		virtual double	prevClosePrice()  const = 0;
-		///×ò³Ö²ÖÁ¿
+		///æ˜¨æŒä»“é‡
 		virtual double	prevOpenInterest()  const = 0;
-		///½ñ¿ªÅÌ
+		///ä»Šå¼€ç›˜
 		virtual double	openPrice()  const = 0;
-		///×î¸ß¼Û
+		///æœ€é«˜ä»·
 		virtual double	highestPrice()  const = 0;
-		///×îµÍ¼Û
+		///æœ€ä½ä»·
 		virtual double	lowestPrice()  const = 0;
-		///ÊıÁ¿
+		///æ•°é‡
 		virtual int	volume()  const = 0;
-		///³É½»½ğ¶î
+		///æˆäº¤é‡‘é¢
 		virtual double	turnover()  const = 0;
-		///³Ö²ÖÁ¿
+		///æŒä»“é‡
 		virtual double	openInterest()  const = 0;
-		///½ñÊÕÅÌ
+		///ä»Šæ”¶ç›˜
 		virtual double	closePrice()  const = 0;
-		///±¾´Î½áËã¼Û
+		///æœ¬æ¬¡ç»“ç®—ä»·
 		virtual double	settlementPrice()  const = 0;
-		///ÕÇÍ£°å¼Û
+		///æ¶¨åœæ¿ä»·
 		virtual double	upperLimitPrice()  const = 0;
-		///µøÍ£°å¼Û
+		///è·Œåœæ¿ä»·
 		virtual double	lowerLimitPrice()  const = 0;
-		///×òĞéÊµ¶È
+		///æ˜¨è™šå®åº¦
 		virtual double	prevDelta()  const = 0;
-		///½ñĞéÊµ¶È
+		///ä»Šè™šå®åº¦
 		virtual double currentDelta()  const = 0;
-		///×îºóĞŞ¸ÄÊ±¼ä
+		///æœ€åä¿®æ”¹æ—¶é—´
 		virtual const std::string&	updateTime() const = 0;
-		///×îºóĞŞ¸ÄºÁÃë
+		///æœ€åä¿®æ”¹æ¯«ç§’
 		virtual int	updateMillisecond()  const = 0;
-		///ÉêÂò¼ÛÒ»
+		///ç”³ä¹°ä»·ä¸€
 		virtual double	bidPrice1()  const = 0;
-		///ÉêÂòÁ¿Ò»
+		///ç”³ä¹°é‡ä¸€
 		virtual int	bidVolume1()  const = 0;
-		///ÉêÂô¼ÛÒ»
+		///ç”³å–ä»·ä¸€
 		virtual double	askPrice1()  const = 0;
-		///ÉêÂôÁ¿Ò»
+		///ç”³å–é‡ä¸€
 		virtual int	askVolume1()  const = 0;
-		///ÉêÂò¼Û¶ş
+		///ç”³ä¹°ä»·äºŒ
 		virtual double	bidPrice2()  const = 0;
-		///ÉêÂòÁ¿¶ş
+		///ç”³ä¹°é‡äºŒ
 		virtual int	bidVolume2()  const = 0;
-		///ÉêÂô¼Û¶ş
+		///ç”³å–ä»·äºŒ
 		virtual double	askPrice2()  const = 0;
-		///ÉêÂôÁ¿¶ş
+		///ç”³å–é‡äºŒ
 		virtual int	askVolume2()  const = 0;
-		///ÉêÂò¼ÛÈı
+		///ç”³ä¹°ä»·ä¸‰
 		virtual double	bidPrice3()  const = 0;
-		///ÉêÂòÁ¿Èı
+		///ç”³ä¹°é‡ä¸‰
 		virtual int	bidVolume3()  const = 0;
-		///ÉêÂô¼ÛÈı
+		///ç”³å–ä»·ä¸‰
 		virtual double	askPrice3()  const = 0;
-		///ÉêÂôÁ¿Èı
+		///ç”³å–é‡ä¸‰
 		virtual int	askVolume3()  const = 0;
-		///ÉêÂò¼ÛËÄ
+		///ç”³ä¹°ä»·å››
 		virtual double	bidPrice4()  const = 0;
-		///ÉêÂòÁ¿ËÄ
+		///ç”³ä¹°é‡å››
 		virtual int	bidVolume4() const = 0;
-		///ÉêÂô¼ÛËÄ
+		///ç”³å–ä»·å››
 		virtual double	askPrice4() const = 0;
-		///ÉêÂôÁ¿ËÄ
+		///ç”³å–é‡å››
 		virtual int	askVolume4()  const = 0;
-		///ÉêÂò¼ÛÎå
+		///ç”³ä¹°ä»·äº”
 		virtual double	bidPrice5()  const = 0;
-		///ÉêÂòÁ¿Îå
+		///ç”³ä¹°é‡äº”
 		virtual int	bidVolume5()  const = 0;
-		///ÉêÂô¼ÛÎå
+		///ç”³å–ä»·äº”
 		virtual double	askPrice5() const = 0;
-		///ÉêÂôÁ¿Îå
+		///ç”³å–é‡äº”
 		virtual int	askVolume5() const = 0;
-		///µ±ÈÕ¾ù¼Û
+		///å½“æ—¥å‡ä»·
 		virtual double	averagePrice() const = 0;
-		///ÒµÎñÈÕÆÚ
+		///ä¸šåŠ¡æ—¥æœŸ
 		virtual const std::string& actionDay() const = 0;
 
 		virtual const std::string toJsonString() const = 0;

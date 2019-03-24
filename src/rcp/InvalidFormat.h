@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <exception>
 #include "../include/rcp.h"
 namespace rcp {

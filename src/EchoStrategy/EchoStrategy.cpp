@@ -2,6 +2,10 @@
 //
 
 #include <iostream>
+#ifdef __GNUC__
+#define __stdcall
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 	int __stdcall onStart();

@@ -1,4 +1,4 @@
-#ifndef _RPC_API_HEADER_
+﻿#ifndef _RPC_API_HEADER_
 #define _RPC_API_HEADER_
 
 #ifdef WIN32

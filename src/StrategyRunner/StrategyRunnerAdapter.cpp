@@ -1,4 +1,4 @@
-#include "StrategyRunnerAdapter.h"
+﻿#include "StrategyRunnerAdapter.h"
 #include "../rcp/DllTradeStrategy.h"
 
 void rcp::AbstractRunnerAdapter::setup(AbstractConfiguration* pConfig)

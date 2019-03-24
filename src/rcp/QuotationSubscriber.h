@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <rcp.h>
 #include "CtpConfiguration.h"
 #include "QuotationHandler.h"

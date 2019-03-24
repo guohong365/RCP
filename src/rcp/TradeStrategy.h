@@ -1,4 +1,4 @@
-#ifndef _TRADE_STRATEGY_INFO_H_
+ï»¿#ifndef _TRADE_STRATEGY_INFO_H_
 #define _TRADE_STRATEGY_INFO_H_
 
 #include <string>
@@ -29,15 +29,15 @@ namespace rcp {
 	class RCP_API AbstractTradeStrategy : public ITradeStrategy
 	{
 		std::string _protocol;
-		std::string _name; // ·şÎñÃû
-		std::string _description;	// ·şÎñÃèÊö¡£
+		std::string _name; // æœåŠ¡å
+		std::string _description;	// æœåŠ¡æè¿°ã€‚
 		std::string _instrument;
 		/*
 		std::string _type;
-		// ´¦ÀíÆ÷ÀàĞÍ
-		// inner - ÄÚ²¿
-		// dll - ¶¯Ì¬¿â
-		// exe - Ö´ĞĞ³ÌĞò
+		// å¤„ç†å™¨ç±»å‹
+		// inner - å†…éƒ¨
+		// dll - åŠ¨æ€åº“
+		// exe - æ‰§è¡Œç¨‹åº
 		// com - COM
 		// corba - CORBA
 		// ws - Web Service

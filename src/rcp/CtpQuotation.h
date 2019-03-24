@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Quotation.h"
 #include <tradeapi/ThostFtdcUserApiStruct.h>
 namespace rcp {

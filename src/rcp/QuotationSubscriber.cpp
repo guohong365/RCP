@@ -1,4 +1,4 @@
-#include "MdSpi.h"
+﻿#include "MdSpi.h"
 #include "QuotationSubscriber.h"
 
 rcp::QuotationSubscriber::QuotationSubscriber(const rcp::CtpConfiguration& config, IQuotationHandler* pHandler):

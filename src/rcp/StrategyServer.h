@@ -1,4 +1,4 @@
-#ifndef _STRATEGY_SERVER_H_
+﻿#ifndef _STRATEGY_SERVER_H_
 #define _STRATEGY_SERVER_H_
 #include <rcp.h>
 #include <Poco/Util/ServerApplication.h>

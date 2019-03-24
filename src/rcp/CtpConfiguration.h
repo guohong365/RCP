@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <rcp.h>
 #include <vector>
 #include <map>
@@ -16,7 +16,7 @@ namespace  rcp {
 			const std::string & cache="");
 		CtpConfiguration(const CtpConfiguration& config);
 		CtpConfiguration & operator=(const CtpConfiguration & config);
-		//CTPœ‡πÿ≈‰÷√
+		//CTPÁõ∏ÂÖ≥ÈÖçÁΩÆ
 		std::string userId;
 		std::string brokerId;
 		std::string password;

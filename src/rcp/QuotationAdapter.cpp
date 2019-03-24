@@ -1,4 +1,4 @@
-#include "QuotationAdapter.h"
+﻿#include "QuotationAdapter.h"
 
 
 IQuotationAdapter::IQuotationAdapter()

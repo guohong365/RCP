@@ -1,4 +1,4 @@
-#include  "Quotation.h"
+Ôªø#include  "Quotation.h"
 #include <Poco/JSON/Object.h>
 #include <Poco/JSON/Parser.h>
 namespace rcp {
@@ -6,93 +6,93 @@ namespace rcp {
 	void IQuotation::dump(std::ostream& stream, IQuotation * p)
 	{
 		stream
-			///∫œ‘º¥˙¬Î
+			///ÂêàÁ∫¶‰ª£Á†Å
 			<< "instrument Id:" << p->instrumentId() << std::endl
-			///Ωª“◊»’
+			///‰∫§ÊòìÊó•
 			<< "trade day:" << p->tradingDay() << std::endl
-			///Ωª“◊À˘¥˙¬Î
+			///‰∫§ÊòìÊâÄ‰ª£Á†Å
 			<< "exchanged id:" << p->exchangeId() << std::endl
-			///∫œ‘º‘⁄Ωª“◊À˘µƒ¥˙¬Î
+			///ÂêàÁ∫¶Âú®‰∫§ÊòìÊâÄÁöÑ‰ª£Á†Å
 			<< "exchanged instrument id:" << p->exchangeInstrumentId() << std::endl
-			///◊Ó–¬º€
+			///ÊúÄÊñ∞‰ª∑
 			<< "last price:" << p->lastPrice() << std::endl
-			///…œ¥ŒΩ·À„º€
+			///‰∏äÊ¨°ÁªìÁÆó‰ª∑
 			<< "prev settlement price:" << p->prevSettlementPrice() << std::endl
-			///◊Ú ’≈Ã
+			///Êò®Êî∂Áõò
 			<< "prev close price:" << p->prevClosePrice() << std::endl
-			///◊Ú≥÷≤÷¡ø
+			///Êò®ÊåÅ‰ªìÈáè
 			<< "prev open interest:" << p->prevOpenInterest() << std::endl
-			///ΩÒø™≈Ã
+			///‰ªäÂºÄÁõò
 			<< "open price:" << p->openPrice() << std::endl
-			///◊Ó∏ﬂº€
+			///ÊúÄÈ´ò‰ª∑
 			<< "higest price:" << p->highestPrice() << std::endl
-			///◊ÓµÕº€
+			///ÊúÄ‰Ωé‰ª∑
 			<< "lowest price:" << p->lowestPrice() << std::endl
-			/// ˝¡ø
+			///Êï∞Èáè
 			<< "volume:" << p->volume() << std::endl
-			///≥…ΩªΩ∂Ó
+			///Êàê‰∫§ÈáëÈ¢ù
 			<< "turnover:" << p->turnover() << std::endl
-			///≥÷≤÷¡ø
+			///ÊåÅ‰ªìÈáè
 			<< "open interest:" << p->openInterest() << std::endl
-			///ΩÒ ’≈Ã
+			///‰ªäÊî∂Áõò
 			<< "close price:" << p->closePrice() << std::endl
-			///±æ¥ŒΩ·À„º€
+			///Êú¨Ê¨°ÁªìÁÆó‰ª∑
 			<< "settlement price:" << p->settlementPrice() << std::endl
-			///’«Õ£∞Âº€
+			///Ê∂®ÂÅúÊùø‰ª∑
 			<< "upper limit price:" << p->upperLimitPrice() << std::endl
-			///µ¯Õ£∞Âº€
+			///Ë∑åÂÅúÊùø‰ª∑
 			<< "lower limit price:" << p->lowerLimitPrice() << std::endl
-			///◊Ú–È µ∂»
+			///Êò®ËôöÂÆûÂ∫¶
 			<< "prev delta:" << p->prevDelta() << std::endl
-			///ΩÒ–È µ∂»
+			///‰ªäËôöÂÆûÂ∫¶
 			<< "current delta:" << p->currentDelta() << std::endl
-			///◊Ó∫Û–ﬁ∏ƒ ±º‰
+			///ÊúÄÂêé‰øÆÊîπÊó∂Èó¥
 			<< "update time:" << p->updateTime() << std::endl
-			///◊Ó∫Û–ﬁ∏ƒ∫¡√Î
+			///ÊúÄÂêé‰øÆÊîπÊØ´Áßí
 			<< "update millisecond:" << p->updateMillisecond() << std::endl
-			///…Í¬Úº€“ª
+			///Áî≥‰π∞‰ª∑‰∏Ä
 			<< "bid price 1:" << p->bidPrice1() << std::endl
-			///…Í¬Ú¡ø“ª
+			///Áî≥‰π∞Èáè‰∏Ä
 			<< "bid volume 1:" << p->bidVolume1() << std::endl
-			///…Í¬Ùº€“ª
+			///Áî≥Âçñ‰ª∑‰∏Ä
 			<< "ask price 1:" << p->askPrice1() << std::endl
-			///…Í¬Ù¡ø“ª
+			///Áî≥ÂçñÈáè‰∏Ä
 			<< "ask volume 1:" << p->askVolume1() << std::endl
-			///…Í¬Úº€2
+			///Áî≥‰π∞‰ª∑2
 			<< "bid price 2:" << p->bidPrice2() << std::endl
-			///…Í¬Ú¡ø2
+			///Áî≥‰π∞Èáè2
 			<< "bid volume 2:" << p->bidVolume2() << std::endl
-			///…Í¬Ùº€2
+			///Áî≥Âçñ‰ª∑2
 			<< "ask price 2:" << p->askPrice2() << std::endl
-			///…Í¬Ù¡ø2
+			///Áî≥ÂçñÈáè2
 			<< "ask volume 2:" << p->askVolume2() << std::endl
-			///…Í¬Úº€3
+			///Áî≥‰π∞‰ª∑3
 			<< "bid price 3:" << p->bidPrice3() << std::endl
-			///…Í¬Ú¡ø3
+			///Áî≥‰π∞Èáè3
 			<< "bid volume 3:" << p->bidVolume3() << std::endl
-			///…Í¬Ùº€3
+			///Áî≥Âçñ‰ª∑3
 			<< "ask price 3:" << p->askPrice3() << std::endl
-			///…Í¬Ù¡ø3
+			///Áî≥ÂçñÈáè3
 			<< "ask volume 3:" << p->askVolume3() << std::endl
-			///…Í¬Úº€4
+			///Áî≥‰π∞‰ª∑4
 			<< "bid price 4:" << p->bidPrice4() << std::endl
-			///…Í¬Ú¡ø4
+			///Áî≥‰π∞Èáè4
 			<< "bid volume 4:" << p->bidVolume4() << std::endl
-			///…Í¬Ùº€4
+			///Áî≥Âçñ‰ª∑4
 			<< "ask price 4:" << p->askPrice4() << std::endl
-			///…Í¬Ù¡ø4
+			///Áî≥ÂçñÈáè4
 			<< "ask volume 4:" << p->askVolume4() << std::endl
-			///…Í¬Úº€5
+			///Áî≥‰π∞‰ª∑5
 			<< "bid price 5:" << p->bidPrice5() << std::endl
-			///…Í¬Ú¡ø5
+			///Áî≥‰π∞Èáè5
 			<< "bid volume 5:" << p->bidVolume5() << std::endl
-			///…Í¬Ùº€5
+			///Áî≥Âçñ‰ª∑5
 			<< "ask price 5:" << p->askPrice5() << std::endl
-			///…Í¬Ù¡ø5
+			///Áî≥ÂçñÈáè5
 			<< "ask volume 5:" << p->askVolume5() << std::endl
-			///µ±»’æ˘º€
+			///ÂΩìÊó•Âùá‰ª∑
 			<< "average price:" << p->averagePrice() << std::endl
-			///“µŒÒ»’∆⁄
+			///‰∏öÂä°Êó•Êúü
 			<< "action day:" << p->actionDay() << std::endl;
 	}
 

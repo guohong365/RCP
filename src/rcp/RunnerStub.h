@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <rcp.h>
 #include <Poco/PipeStream.h>
 #include <Poco/Process.h>

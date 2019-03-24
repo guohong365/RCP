@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <Poco/Util/AbstractConfiguration.h>
 #include "TradeStrategy.h"
 #include <map>

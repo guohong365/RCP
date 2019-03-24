@@ -1,4 +1,4 @@
-#include "CtpQuotation.h"
+﻿#include "CtpQuotation.h"
 #include <tradeapi/ThostFtdcUserApiStruct.h>
 namespace rcp {
 	CtpQuotation::CtpQuotation(const CThostFtdcDepthMarketDataField* pMarketDataField)

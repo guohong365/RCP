@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 namespace  rcp {
 	class RCP_API Dumpable

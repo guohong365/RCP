@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "CppUnit/TestCase.h"
 #include <CppUnit/TestSuite.h>
 

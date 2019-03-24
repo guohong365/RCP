@@ -1,4 +1,4 @@
-#include "CtpConfiguration.h"
+﻿#include "CtpConfiguration.h"
 #include <tradeapi/ThostFtdcMdApi.h>
 
 

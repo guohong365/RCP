@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include <rcp.h>
 #include <tradeapi/ThostFtdcUserApiStruct.h>

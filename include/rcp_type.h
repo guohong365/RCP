@@ -1,4 +1,4 @@
-#ifndef _RCP_TYPE_H_
+﻿#ifndef _RCP_TYPE_H_
 #define _RCP_TYPE_H_
 
 typedef long rcp_context_t;

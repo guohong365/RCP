@@ -1,4 +1,4 @@
-#include "TradeStrategy.h"
+﻿#include "TradeStrategy.h"
 #include <string>
 
 

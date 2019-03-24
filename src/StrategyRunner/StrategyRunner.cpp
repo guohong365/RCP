@@ -1,4 +1,4 @@
-#include "StrategyRunner.h"
+﻿#include "StrategyRunner.h"
 #include "../rcp/TradeStrategy.h"
 #include <Poco/Util/HelpFormatter.h>
 #include "StrategyRunnerAdapterFactory.h"

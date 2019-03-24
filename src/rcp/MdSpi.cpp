@@ -1,4 +1,4 @@
-
+ï»¿
 #include "MdSpi.h"
 #include <iostream>
 #include <vector>
@@ -11,9 +11,9 @@ using namespace std;
 //#pragma warning(disable : 4996)
 
 
-// USER_API²ÎÊı
+// USER_APIå‚æ•°
 
-// ÇëÇó±àºÅ
+// è¯·æ±‚ç¼–å·
 int rcp::CMdSpi::_requestId = 0;
 
 
@@ -39,7 +39,7 @@ void rcp::CMdSpi::OnHeartBeatWarning(int nTimeLapse)
 void rcp::CMdSpi::OnFrontConnected()
 {
 	cerr << "--->>> " << "OnFrontConnected" << endl;
-	///ÓÃ»§µÇÂ¼ÇëÇó
+	///ç”¨æˆ·ç™»å½•è¯·æ±‚
 	reqUserLogin();
 }
 
@@ -51,7 +51,7 @@ void rcp::CMdSpi::reqUserLogin()
 	strcpy_s(req.UserID, _config.userId.c_str());
 	strcpy_s(req.Password, _config.password.c_str());
 	int iResult = _pUserApi->ReqUserLogin(&req, ++_requestId);
-	cerr << "--->>> ·¢ËÍÓÃ»§µÇÂ¼ÇëÇó: " << ((iResult == 0) ? "³É¹¦" : "Ê§°Ü") << endl;
+	cerr << "--->>> å‘é€ç”¨æˆ·ç™»å½•è¯·æ±‚: " << ((iResult == 0) ? "æˆåŠŸ" : "å¤±è´¥") << endl;
 }
 
 void rcp::CMdSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
@@ -60,11 +60,11 @@ void rcp::CMdSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
 	cerr << "--->>> " << "OnRspUserLogin" << endl;
 	if (bIsLast && !isError(pRspInfo))
 	{
-		///»ñÈ¡µ±Ç°½»Ò×ÈÕ
-		cerr << "--->>> »ñÈ¡µ±Ç°½»Ò×ÈÕ = " << _pUserApi->GetTradingDay() << endl;
-		// ÇëÇó¶©ÔÄĞĞÇé
+		///è·å–å½“å‰äº¤æ˜“æ—¥
+		cerr << "--->>> è·å–å½“å‰äº¤æ˜“æ—¥ = " << _pUserApi->GetTradingDay() << endl;
+		// è¯·æ±‚è®¢é˜…è¡Œæƒ…
 		subscribeMarketData(_config.instruments);	
-		// ÇëÇó¶©ÔÄÑ¯¼Û,Ö»ÄÜ¶©ÔÄÖ£ÉÌËùµÄÑ¯¼Û£¬ÆäËû½»Ò×ËùÍ¨¹ıtraderapiÏàÓ¦½Ó¿Ú·µ»Ø
+		// è¯·æ±‚è®¢é˜…è¯¢ä»·,åªèƒ½è®¢é˜…éƒ‘å•†æ‰€çš„è¯¢ä»·ï¼Œå…¶ä»–äº¤æ˜“æ‰€é€šè¿‡traderapiç›¸åº”æ¥å£è¿”å›
 		//subscribeForQuotationResponse(_instruments);	
 	}
 }
@@ -107,7 +107,7 @@ rcp::CMdSpi::CMdSpi(const CtpConfiguration & config,IQuotationHandler *pHandler)
 void rcp::CMdSpi::connect()
 {
 	char frontAddress[1024];
-	strcpy_s(frontAddress, _config.marketFrontEnd.c_str()); //"tcp://180.168.146.187:10031";		// Ç°ÖÃµØÖ·
+	strcpy_s(frontAddress, _config.marketFrontEnd.c_str()); //"tcp://180.168.146.187:10031";		// å‰ç½®åœ°å€
 	_pUserApi->RegisterSpi(this);
 	_pUserApi->RegisterFront(frontAddress);
 	_pUserApi->Init();
@@ -124,7 +124,7 @@ void rcp::CMdSpi::subscribeMarketData(std::set<std::string> & instruments)
 	_ppInstruments = prepareInstrumentsBuffer(instruments);
 	int iResult = _pUserApi->SubscribeMarketData(_ppInstruments, instruments.size());	
 
-	cerr << "--->>> ·¢ËÍĞĞÇé¶©ÔÄÇëÇó: " << ((iResult == 0) ? "³É¹¦" : "Ê§°Ü") << endl;
+	cerr << "--->>> å‘é€è¡Œæƒ…è®¢é˜…è¯·æ±‚: " << ((iResult == 0) ? "æˆåŠŸ" : "å¤±è´¥") << endl;
 }
 
 void rcp::CMdSpi::subscribeForQuotationResponse(std::set<std::string> & instruments)
@@ -132,7 +132,7 @@ void rcp::CMdSpi::subscribeForQuotationResponse(std::set<std::string> & instrume
 	char **ppInstruments = prepareInstrumentsBuffer(instruments);
 	int iResult = _pUserApi->SubscribeForQuoteRsp(ppInstruments, instruments.size());
 	freeInstrumentsBuffer(ppInstruments, instruments.size());
-	cerr << "--->>> ·¢ËÍÑ¯¼Û¶©ÔÄÇëÇó: " << ((iResult == 0) ? "³É¹¦" : "Ê§°Ü") << endl;
+	cerr << "--->>> å‘é€è¯¢ä»·è®¢é˜…è¯·æ±‚: " << ((iResult == 0) ? "æˆåŠŸ" : "å¤±è´¥") << endl;
 }
 
 void rcp::CMdSpi::join()
@@ -189,7 +189,7 @@ void rcp::CMdSpi::OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp)
 
 bool rcp::CMdSpi::isError(CThostFtdcRspInfoField *pRspInfo)
 {
-	// Èç¹ûErrorID != 0, ËµÃ÷ÊÕµ½ÁË´íÎóµÄÏìÓ¦
+	// å¦‚æœErrorID != 0, è¯´æ˜æ”¶åˆ°äº†é”™è¯¯çš„å“åº”
 	bool bResult = ((pRspInfo) && (pRspInfo->ErrorID != 0));
 	if (bResult)
 		cerr << "--->>> ErrorID=" << pRspInfo->ErrorID << ", ErrorMsg=" << pRspInfo->ErrorMsg << endl;

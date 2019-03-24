@@ -1,9 +1,9 @@
-
+ï»¿
 #include "CtpHelper.h"
 
 std::string rcp::CtpHelper::getMarketDataString(CThostFtdcDepthMarketDataField* pDepthMarketData)
 {
-	std::string str = "Quote SDK ½ÓÊÕÐÐÇéÐÅÏ¢:InstrumentID:";
+	std::string str = "Quote SDK æŽ¥æ”¶è¡Œæƒ…ä¿¡æ¯:InstrumentID:";
 	str += pDepthMarketData->InstrumentID;
 	str += " TradingDay:";
 	str += pDepthMarketData->TradingDay;

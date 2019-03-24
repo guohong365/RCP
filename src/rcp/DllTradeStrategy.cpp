@@ -1,4 +1,4 @@
-#include "DllTradeStrategy.h"
+﻿#include "DllTradeStrategy.h"
 
 rcp::DllTradeStrategy::DllTradeStrategy()
 	:AbstractTradeStrategy("dll")

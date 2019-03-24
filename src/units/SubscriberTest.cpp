@@ -1,4 +1,4 @@
-#include "SubscriberTest.h"
+﻿#include "SubscriberTest.h"
 #include <Poco/Util/XMLConfiguration.h>
 #include <Poco/Util/LoggingConfigurator.h>
 #include <Poco/Logger.h>

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <Poco/Foundation.h>
 #include "CppUnit/TestCase.h"
 #include <Poco/AutoPtr.h>

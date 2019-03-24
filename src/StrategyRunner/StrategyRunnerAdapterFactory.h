@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <Poco/DynamicFactory.h>
 #include "StrategyRunnerAdapter.h"
 #include "../rcp/TradeStrategy.h"

@@ -1,4 +1,4 @@
-#ifndef _STRATEGY_RUNNER_H_
+﻿#ifndef _STRATEGY_RUNNER_H_
 #define _STRATEGY_RUNNER_H_
 #include <Poco/Process.h>
 #include "../rcp/TradeStrategy.h"
