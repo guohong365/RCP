@@ -4,6 +4,7 @@
 #linux ignore files
 *.o
 *.la
+*.lo
 *.so
 *.log
 *.in
@@ -21,7 +22,7 @@ install-sh
 **/Makefile
 missing
 config.h
-congif.status
+config.status
 libtool
 stamp-h1
 autom4te.cache/
