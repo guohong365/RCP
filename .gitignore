@@ -5,7 +5,26 @@
 *.o
 *.la
 *.so
+*.log
+*.in
 
+aclocal.m4
+compile
+config.sub
+config.h.in
+config.guess
+depcomp
+ltmain.sh
+ar-lib 
+configure
+install-sh
+**/Makefile
+missing
+config.h
+congif.status
+libtool
+stamp-h1
+autom4te.cache/
 **/.libs/
 **/.deps/
 
